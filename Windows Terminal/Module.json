@@ -1,0 +1,8 @@
+{
+    "Module": {
+        "Az.Accounts": null,
+        "Az.Tools.Predictor": null,
+        "PSReadLine": null,
+        "Terminal-Icons": null
+    }
+}
