@@ -1,7 +1,7 @@
 if (!([Security.Principal.WindowsPrincipal] `
             [Security.Principal.WindowsIdentity]::GetCurrent() `
     ).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
-    Start-Process pwsh -Verb RunAs -ArgumentList ('-noprofile -file "{0}" -elevated' -f ($myinvocation.MyCommand.Definition))
+    Start-Process pwsh -Verb RunAs -ArgumentList ('-nologo -noexit -noprofile -file "{0}" -elevated' -f ($myinvocation.MyCommand.Definition))
     exit
 }
 else {
