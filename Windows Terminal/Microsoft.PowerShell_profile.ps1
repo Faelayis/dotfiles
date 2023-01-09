@@ -27,10 +27,6 @@ function Clear-SavedHistory {
 
   $havePSReadline = ($null -ne (Get-Module -EA SilentlyContinue PSReadline))
   Write-Verbose "PSReadline present: $havePSReadline"
-  # $target = if ($havePSReadline) { "entire command history, including from previous sessions" } else { "command history" } 
-  # if (-not $pscmdlet.ShouldProcess($target)) {
-  #   return
-  # }
   if ($havePSReadline) {
     Clear-Host
     if (Test-Path (Get-PSReadlineOption).HistorySavePath) { 
