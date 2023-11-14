@@ -13,7 +13,7 @@ alias pn='pnpm'
 # Packages
 alias update-ohmyposh='echo "RUN UPDATE (Oh My Posh)" && curl -s https://ohmyposh.dev/install.sh | sudo bash -s'
 alias update-flatpak='echo "RUN UPDATE (Flatpak)" && sudo flatpak update -y'
-alias update-dnf='echo "RUN UPDATE (dnf)" && sudo dnf clean all && sudo dnf upgrade -y'
+alias update-dnf='echo "RUN UPDATE (dnf)" && sudo dnf upgrade -y'
 alias update-all='echo "RUN UPDATE ALL" && update-dnf && update-ohmyposh && update-flatpak'
 
 # Utility
