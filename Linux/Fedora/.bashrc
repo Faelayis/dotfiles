@@ -1,2 +1,2 @@
 # Import alias
-source ~/.alias.sh
+source ~/Documents/GitHub/Faelayis/My-Terminal/Linux/Fedora/.alias.sh

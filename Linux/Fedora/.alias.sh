@@ -1,6 +1,6 @@
 # Oh My Posh Configuration
-OhMyPosh_Themes='Documents/GitHub/JanDeDobbeleer/oh-my-posh/themes/emodipt-extend.omp.json'
-eval "$(oh-my-posh init bash --config $([ $EUID != 0 ] && echo "~/$OhMyPosh_Themes" || echo "$OhMyPosh_Themes"))"
+# OhMyPosh_Themes='Documents/GitHub/JanDeDobbeleer/oh-my-posh/themes/emodipt-extend.omp.json'
+# eval "$(oh-my-posh init bash --config $([ $EUID != 0 ] && echo "~/$OhMyPosh_Themes" || echo "$OhMyPosh_Themes"))"
 
 # Initialize
 alias sudo='sudo -E'
@@ -11,7 +11,7 @@ alias clear='printf "\033c" && reload'
 alias pn='pnpm'
 
 # Packages
-alias update-ohmyposh='echo "RUN UPDATE (Oh My Posh)" && curl -s https://ohmyposh.dev/install.sh | sudo bash -s'
+alias update-ohmyposh='echo "RUN UPDATE (Oh My Posh)" && curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin'
 alias update-flatpak='echo "RUN UPDATE (Flatpak)" && sudo flatpak update -y'
 alias update-dnf='echo "RUN UPDATE (dnf)" && sudo dnf upgrade -y'
 alias update-all='echo "RUN UPDATE ALL" && update-dnf && update-ohmyposh && update-flatpak'
