@@ -11,8 +11,9 @@ alias clear='printf "\033c" && reload'
 alias pn='pnpm'
 
 # Packages
+
 alias update-ohmyposh='echo "RUN UPDATE (Oh My Posh)" && oh-my-posh upgrade'
-alias update-flatpak='echo "RUN UPDATE (Flatpak)" && sudo flatpak update -y'
+alias update-flatpak='echo "RUN UPDATE (Flatpak)" && flatpak update -y'
 alias update-dnf='echo "RUN UPDATE (dnf)" && sudo dnf upgrade -y'
 alias update-all='echo "RUN UPDATE ALL" && update-dnf && update-ohmyposh && update-flatpak'
 
