@@ -1,6 +1,6 @@
 # Oh My Posh Configuration
-# OhMyPosh_Themes='Documents/GitHub/JanDeDobbeleer/oh-my-posh/themes/emodipt-extend.omp.json'
-# eval "$(oh-my-posh init bash --config $([ $EUID != 0 ] && echo "~/$OhMyPosh_Themes" || echo "$OhMyPosh_Themes"))"
+OhMyPosh_Themes='/home/faelayis/.cache/oh-my-posh/themes/emodipt-extend.omp.json'
+eval "$(oh-my-posh init bash --config $([ $EUID != 0 ] && echo "$OhMyPosh_Themes" || echo "$OhMyPosh_Themes"))"
 
 # Initialize
 alias sudo='sudo -E'
