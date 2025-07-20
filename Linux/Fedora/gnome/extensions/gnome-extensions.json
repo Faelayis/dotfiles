@@ -42,6 +42,12 @@
     "enabled": false
   },
   {
+    "uuid": "better-ibus@mechtifs",
+    "name": "Better IBus",
+    "version": "5",
+    "enabled": true
+  },
+  {
     "uuid": "clipboard-indicator@tudmotu.com",
     "name": "Clipboard Indicator",
     "version": "68",
