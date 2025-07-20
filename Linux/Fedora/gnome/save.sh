@@ -16,3 +16,9 @@ find . -type f -name "dump.sh" -print0 | xargs -0 -I {} bash -c '
   
   cd "$START_DIR" || { echo "[Error]: Could not return to $START_DIR from $DIR. This might cause issues."; return 1; }
 ' _
+
+echo "[Git]: Pushing changes to remote repository..."
+git add --all
+git commit -m "[Script] Update Data"
+git push
+echo "[Git]: Push complete."

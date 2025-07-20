@@ -63,7 +63,7 @@
     "uuid": "custom-command-list@storageb.github.com",
     "name": "Custom Command Menu",
     "version": "10",
-    "enabled": false
+    "enabled": true
   },
   {
     "uuid": "dash-to-dock@micxgx.gmail.com",
