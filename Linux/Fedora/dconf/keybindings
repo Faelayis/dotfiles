@@ -1,7 +1,0 @@
-[/]
-move-to-monitor-left=['<Shift><Super>a']
-move-to-monitor-right=['<Shift><Super>d']
-move-to-workspace-left=['<Shift><Super>q']
-move-to-workspace-right=['<Shift><Super>e']
-switch-input-source=['<Alt>Shift_L', '<Shift>Alt_L']
-switch-input-source-backward=@as []
