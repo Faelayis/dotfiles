@@ -5,8 +5,8 @@ extensions_dirs=(
   "/usr/share/gnome-shell/extensions"
 )
 
-output="gnome-extensions.json"
-temp_output="${output}.tmp"
+output="./gnome-extensions.json"
+temp_output="./${output}.tmp"
 
 echo "[" > "$temp_output"
 
