@@ -102,6 +102,12 @@
     "enabled": true
   },
   {
+    "uuid": "gnome-ui-tune@itstime.tech",
+    "name": "Gnome 4x UI Improvements",
+    "version": "24",
+    "enabled": true
+  },
+  {
     "uuid": "junk-notification-cleaner@murar8.github.com",
     "name": "Junk Notification Cleaner",
     "version": "4",
@@ -159,7 +165,7 @@
     "uuid": "power-off-options@axelitama.github.io",
     "name": "Power Off Options",
     "version": "2",
-    "enabled": true
+    "enabled": false
   },
   {
     "uuid": "privacy-indicators-accent-color@sopht.li",
@@ -201,6 +207,12 @@
     "uuid": "system-monitor@gnome-shell-extensions.gcampax.github.com",
     "name": "System Monitor",
     "version": "9",
+    "enabled": true
+  },
+  {
+    "uuid": "update-extension@purejava.org",
+    "name": "Fedora Linux Update Indicator",
+    "version": "29",
     "enabled": true
   },
   {
