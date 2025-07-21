@@ -18,7 +18,8 @@ alias update-dnf='echo "RUN UPDATE (dnf)" && sudo dnf upgrade -y'
 alias update-all='echo "RUN UPDATE ALL" && update-dnf && update-ohmyposh && update-flatpak'
 
 # Utility
-alias nf='neofetch'
+alias nf='fastfetch'
+alias ff='fastfetch'
 
 # DNS
 alias dns='sudo gedit /etc/systemd/resolved.conf'
