@@ -171,7 +171,7 @@
     "uuid": "places-menu@gnome-shell-extensions.gcampax.github.com",
     "name": "Places Status Indicator",
     "version": "69",
-    "enabled": true
+    "enabled": false
   },
   {
     "uuid": "power-off-options@axelitama.github.io",
@@ -213,12 +213,6 @@
     "uuid": "screenshort-cut@pauloimon",
     "name": "Screenshort-cut",
     "version": "5",
-    "enabled": true
-  },
-  {
-    "uuid": "smart-auto-move@khimaros.com",
-    "name": "Smart Auto Move",
-    "version": "31",
     "enabled": true
   },
   {
