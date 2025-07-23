@@ -66,6 +66,12 @@
     "enabled": true
   },
   {
+    "uuid": "current-monitor-window-app-switcher@thmatosbr",
+    "name": "Current Monitor Window/App Switcher",
+    "version": "6",
+    "enabled": true
+  },
+  {
     "uuid": "custom-command-list@storageb.github.com",
     "name": "Custom Command Menu",
     "version": "10",
@@ -90,12 +96,6 @@
     "enabled": true
   },
   {
-    "uuid": "dock-from-dash@fthx",
-    "name": "Dock from Dash",
-    "version": "74",
-    "enabled": false
-  },
-  {
     "uuid": "dynamic-panel@velhlkj.com",
     "name": "Dynamic Panel",
     "version": "40",
@@ -104,7 +104,7 @@
   {
     "uuid": "editdesktopfiles@dannflower",
     "name": "Edit Desktop Files",
-    "version": "8",
+    "version": "9",
     "enabled": true
   },
   {
@@ -130,6 +130,12 @@
     "name": "Launch New Instance",
     "version": "",
     "enabled": false
+  },
+  {
+    "uuid": "lineup@hedgie.tech",
+    "name": "Lineup",
+    "version": "16",
+    "enabled": true
   },
   {
     "uuid": "lockkeys@vaina.lt",
@@ -195,12 +201,30 @@
     "uuid": "quicksettings-audio-devices-hider@marcinjahn.com",
     "name": "Quick Settings Audio Devices Hider",
     "version": "16",
+    "enabled": false
+  },
+  {
+    "uuid": "restartto@tiagoporsch.github.io",
+    "name": "Restart To",
+    "version": "8",
     "enabled": true
   },
   {
     "uuid": "screenshort-cut@pauloimon",
     "name": "Screenshort-cut",
     "version": "5",
+    "enabled": true
+  },
+  {
+    "uuid": "smart-auto-move@khimaros.com",
+    "name": "Smart Auto Move",
+    "version": "31",
+    "enabled": true
+  },
+  {
+    "uuid": "sound-percentage@subashghimire.info.np",
+    "name": "Sound percentage",
+    "version": "2",
     "enabled": true
   },
   {
@@ -213,7 +237,7 @@
     "uuid": "system-monitor@gnome-shell-extensions.gcampax.github.com",
     "name": "System Monitor",
     "version": "9",
-    "enabled": true
+    "enabled": false
   },
   {
     "uuid": "update-extension@purejava.org",
@@ -228,15 +252,9 @@
     "enabled": true
   },
   {
-    "uuid": "weatheroclock@CleoMenezesJr.github.io",
-    "name": "Weather O'Clock",
-    "version": "16",
-    "enabled": false
-  },
-  {
     "uuid": "window-list@gnome-shell-extensions.gcampax.github.com",
     "name": "Window List",
-    "version": "",
+    "version": "62",
     "enabled": false
   }
 ]
