@@ -1,21 +1,20 @@
 # Oh My Posh Configuration
-OhMyPosh_Themes='/home/faelayis/.cache/oh-my-posh/themes/emodipt-extend.omp.json'
-eval "$(oh-my-posh init bash --config $([ $EUID != 0 ] && echo "$OhMyPosh_Themes" || echo "$OhMyPosh_Themes"))"
+# OhMyPosh_Themes='/home/faelayis/.cache/oh-my-posh/themes/emodipt-extend.omp.json'
+# eval "$(oh-my-posh init bash --config $([ $EUID != 0 ] && echo "$OhMyPosh_Themes" || echo "$OhMyPosh_Themes"))"
 
 # Initialize
-alias sudo='sudo -E'
-alias reload='exec bash --login'
-alias clear='printf "\033c" && reload'
+alias clear='clear && zsh'
+alias reload='omz reload'
 
 # Packages (NodeJS)
 alias pn='pnpm'
 
 # Packages
-
-alias update-ohmyposh='echo "RUN UPDATE (Oh My Posh)" && oh-my-posh upgrade'
+alias update-zsh='echo "RUN UPDATE (Oh My Zsh & zinit)" && omz update && zinit update --parallel && zinit delete --clean'
+# alias update-ohmyposh='echo "RUN UPDATE (Oh My Posh)" && oh-my-posh upgrade'
 alias update-flatpak='echo "RUN UPDATE (Flatpak)" && flatpak update -y'
 alias update-dnf='echo "RUN UPDATE (dnf)" && sudo dnf upgrade -y'
-alias update-all='echo "RUN UPDATE ALL" && update-dnf && update-ohmyposh && update-flatpak'
+alias update-all='echo "RUN UPDATE ALL" && update-dnf && update-zsh && update-flatpak'
 
 # Utility
 alias nf='fastfetch'
