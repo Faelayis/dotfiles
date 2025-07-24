@@ -3,6 +3,7 @@
 paths=(
    "/org/gnome/gnome-session/"
    "/org/gnome/shell/extensions/"
+   "/org/gnome/shell/keybindings/"
    "/org/gnome/desktop/interface/"
    "/org/gnome/desktop/wm/keybindings/"
    "/org/gnome/settings-daemon/plugins/media-keys/"
