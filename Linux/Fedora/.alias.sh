@@ -3,7 +3,7 @@
 # eval "$(oh-my-posh init bash --config $([ $EUID != 0 ] && echo "$OhMyPosh_Themes" || echo "$OhMyPosh_Themes"))"
 
 # Initialize
-alias clear='clear && zsh'
+alias clear='clear && exec zsh'
 alias reload='omz reload'
 
 # Packages (NodeJS)

@@ -1,9 +1,11 @@
 ## Plugin
 zinit light zdharma-continuum/fast-syntax-highlighting
+zinit light marlonrichert/zsh-autocomplete
 zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-zinit light Aloxaf/fzf-tab
+# zinit light zsh-users/zsh-autosuggestions
+# zinit light Aloxaf/fzf-tab
 zinit light ntnyq/omz-plugin-bun
+zinit light MichaelAquilina/zsh-you-should-use
 
 ## Snippets
 zinit snippet OMZP::dnf
