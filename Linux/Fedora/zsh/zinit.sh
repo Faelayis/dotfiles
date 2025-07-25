@@ -1,20 +1,27 @@
 ## Plugin
-zinit light zdharma-continuum/fast-syntax-highlighting
-zinit light marlonrichert/zsh-autocomplete
-zinit light zsh-users/zsh-completions
 # zinit light zsh-users/zsh-autosuggestions
 # zinit light Aloxaf/fzf-tab
 zinit light ntnyq/omz-plugin-bun
+zinit light zsh-users/zsh-completions
+zinit light marlonrichert/zsh-autocomplete
 zinit light MichaelAquilina/zsh-you-should-use
+zinit light zdharma-continuum/fast-syntax-highlighting
 
 ## Snippets
+# OMZ/lib/
+zinit snippet OMZL::git.zsh
+zinit snippet OMZL::async_prompt.zsh 
+zinit snippet OMZL::prompt_info_functions.zsh
+
+# OMZ/plugins/
+zinit snippet OMZP::nvm
+zinit snippet OMZP::node
+zinit snippet OMZP::nodenv
 zinit snippet OMZP::bun
 zinit snippet OMZP::dnf
 zinit snippet OMZP::git
-zinit snippet OMZL::git.zsh
-zinit snippet OMZP::copyfile
 zinit snippet OMZP::history
-zinit snippet OMZL::async_prompt.zsh 
+zinit snippet OMZP::copyfile
 zinit snippet OMZP::command-not-found
 
 ## Config
