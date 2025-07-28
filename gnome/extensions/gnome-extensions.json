@@ -15,7 +15,7 @@
     "uuid": "appindicatorsupport@rgcjonas.gmail.com",
     "name": "AppIndicator and KStatusNotifierItem Support",
     "version": "60",
-    "enabled": true
+    "enabled": false
   },
   {
     "uuid": "apps-menu@gnome-shell-extensions.gcampax.github.com",
@@ -162,6 +162,12 @@
     "enabled": true
   },
   {
+    "uuid": "panel-corners@aunetx",
+    "name": "Panel corners",
+    "version": "14",
+    "enabled": true
+  },
+  {
     "uuid": "panel-workspace-scroll@polymeilex.github.io",
     "name": "Panel Workspace Scroll",
     "version": "5",
@@ -183,7 +189,7 @@
     "uuid": "privacy-indicators-accent-color@sopht.li",
     "name": "Privacy Indicators Accent Color",
     "version": "3",
-    "enabled": true
+    "enabled": false
   },
   {
     "uuid": "quick-lang-switch@ankostis.gmail.com",
@@ -207,18 +213,18 @@
     "uuid": "restartto@tiagoporsch.github.io",
     "name": "Restart To",
     "version": "8",
-    "enabled": true
-  },
-  {
-    "uuid": "screenshort-cut@pauloimon",
-    "name": "Screenshort-cut",
-    "version": "5",
-    "enabled": true
+    "enabled": false
   },
   {
     "uuid": "sound-percentage@subashghimire.info.np",
     "name": "Sound percentage",
     "version": "2",
+    "enabled": true
+  },
+  {
+    "uuid": "status-area-horizontal-spacing@mathematical.coffee.gmail.com",
+    "name": "Status Area Horizontal Spacing",
+    "version": "30",
     "enabled": true
   },
   {
@@ -231,7 +237,7 @@
     "uuid": "system-monitor@gnome-shell-extensions.gcampax.github.com",
     "name": "System Monitor",
     "version": "9",
-    "enabled": false
+    "enabled": true
   },
   {
     "uuid": "update-extension@purejava.org",
@@ -243,7 +249,7 @@
     "uuid": "user-theme@gnome-shell-extensions.gcampax.github.com",
     "name": "User Themes",
     "version": "64",
-    "enabled": true
+    "enabled": false
   },
   {
     "uuid": "window-list@gnome-shell-extensions.gcampax.github.com",
