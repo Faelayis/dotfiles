@@ -6,6 +6,7 @@ zinit light zsh-users/zsh-completions
 zinit light marlonrichert/zsh-autocomplete
 zinit light MichaelAquilina/zsh-you-should-use
 zinit light ntnyq/omz-plugin-bun
+zinit light ntnyq/omz-plugin-pnpm
 
 ## Snippets
 # OMZ/lib/
