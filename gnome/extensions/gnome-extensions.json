@@ -1,0 +1,254 @@
+[
+  {
+    "uuid": "BringOutSubmenuOfPowerOffLogoutButton@pratap.fastmail.fm",
+    "name": "Bring Out Submenu Of Power Off Button",
+    "version": "61",
+    "enabled": true
+  },
+  {
+    "uuid": "CoverflowAltTab@palatis.blogspot.com",
+    "name": "Coverflow Alt-Tab",
+    "version": "78",
+    "enabled": true
+  },
+  {
+    "uuid": "appindicatorsupport@rgcjonas.gmail.com",
+    "name": "AppIndicator and KStatusNotifierItem Support",
+    "version": "60",
+    "enabled": true
+  },
+  {
+    "uuid": "apps-menu@gnome-shell-extensions.gcampax.github.com",
+    "name": "Apps Menu",
+    "version": "",
+    "enabled": false
+  },
+  {
+    "uuid": "auto-activities@CleoMenezesJr.github.io",
+    "name": "Auto Activities",
+    "version": "15",
+    "enabled": true
+  },
+  {
+    "uuid": "aztaskbar@aztaskbar.gitlab.com",
+    "name": "App Icons Taskbar",
+    "version": "31",
+    "enabled": true
+  },
+  {
+    "uuid": "background-logo@fedorahosted.org",
+    "name": "Background Logo",
+    "version": "",
+    "enabled": false
+  },
+  {
+    "uuid": "better-ibus@mechtifs",
+    "name": "Better IBus",
+    "version": "5",
+    "enabled": true
+  },
+  {
+    "uuid": "clipboard-indicator@tudmotu.com",
+    "name": "Clipboard Indicator",
+    "version": "68",
+    "enabled": true
+  },
+  {
+    "uuid": "color-picker@tuberry",
+    "name": "Color Picker",
+    "version": "46",
+    "enabled": false
+  },
+  {
+    "uuid": "compiz-windows-effect@hermes83.github.com",
+    "name": "Compiz windows effect",
+    "version": "26",
+    "enabled": true
+  },
+  {
+    "uuid": "current-monitor-window-app-switcher@thmatosbr",
+    "name": "Current Monitor Window/App Switcher",
+    "version": "6",
+    "enabled": true
+  },
+  {
+    "uuid": "custom-command-list@storageb.github.com",
+    "name": "Custom Command Menu",
+    "version": "10",
+    "enabled": true
+  },
+  {
+    "uuid": "dash-to-dock@micxgx.gmail.com",
+    "name": "Dash to Dock",
+    "version": "101",
+    "enabled": true
+  },
+  {
+    "uuid": "dash2dock-lite@icedman.github.com",
+    "name": "Dash2Dock Animated",
+    "version": "75",
+    "enabled": false
+  },
+  {
+    "uuid": "desktop-cube@schneegans.github.com",
+    "name": "Desktop Cube",
+    "version": "28",
+    "enabled": true
+  },
+  {
+    "uuid": "dynamic-panel@velhlkj.com",
+    "name": "Dynamic Panel",
+    "version": "40",
+    "enabled": false
+  },
+  {
+    "uuid": "editdesktopfiles@dannflower",
+    "name": "Edit Desktop Files",
+    "version": "9",
+    "enabled": true
+  },
+  {
+    "uuid": "gnome-ui-tune@itstime.tech",
+    "name": "Gnome 4x UI Improvements",
+    "version": "24",
+    "enabled": true
+  },
+  {
+    "uuid": "junk-notification-cleaner@murar8.github.com",
+    "name": "Junk Notification Cleaner",
+    "version": "4",
+    "enabled": true
+  },
+  {
+    "uuid": "just-perfection-desktop@just-perfection",
+    "name": "Just Perfection",
+    "version": "34",
+    "enabled": false
+  },
+  {
+    "uuid": "launch-new-instance@gnome-shell-extensions.gcampax.github.com",
+    "name": "Launch New Instance",
+    "version": "",
+    "enabled": false
+  },
+  {
+    "uuid": "lineup@hedgie.tech",
+    "name": "Lineup",
+    "version": "16",
+    "enabled": true
+  },
+  {
+    "uuid": "lockkeys@vaina.lt",
+    "name": "Lock Keys",
+    "version": "61",
+    "enabled": true
+  },
+  {
+    "uuid": "mprisLabel@moon-0xff.github.com",
+    "name": "Media Label and Controls (Mpris Label)",
+    "version": "40",
+    "enabled": true
+  },
+  {
+    "uuid": "native-window-placement@gnome-shell-extensions.gcampax.github.com",
+    "name": "Native Window Placement",
+    "version": "65",
+    "enabled": false
+  },
+  {
+    "uuid": "notification-configurator@exposedcat",
+    "name": "Notification Configurator",
+    "version": "13",
+    "enabled": true
+  },
+  {
+    "uuid": "panel-workspace-scroll@polymeilex.github.io",
+    "name": "Panel Workspace Scroll",
+    "version": "5",
+    "enabled": true
+  },
+  {
+    "uuid": "places-menu@gnome-shell-extensions.gcampax.github.com",
+    "name": "Places Status Indicator",
+    "version": "69",
+    "enabled": false
+  },
+  {
+    "uuid": "power-off-options@axelitama.github.io",
+    "name": "Power Off Options",
+    "version": "2",
+    "enabled": false
+  },
+  {
+    "uuid": "privacy-indicators-accent-color@sopht.li",
+    "name": "Privacy Indicators Accent Color",
+    "version": "3",
+    "enabled": true
+  },
+  {
+    "uuid": "quick-lang-switch@ankostis.gmail.com",
+    "name": "Quick Lang Switch",
+    "version": "15",
+    "enabled": false
+  },
+  {
+    "uuid": "quick-settings-tweaks@qwreey",
+    "name": "Quick Settings Tweaks",
+    "version": "30",
+    "enabled": true
+  },
+  {
+    "uuid": "quicksettings-audio-devices-hider@marcinjahn.com",
+    "name": "Quick Settings Audio Devices Hider",
+    "version": "16",
+    "enabled": false
+  },
+  {
+    "uuid": "restartto@tiagoporsch.github.io",
+    "name": "Restart To",
+    "version": "8",
+    "enabled": true
+  },
+  {
+    "uuid": "screenshort-cut@pauloimon",
+    "name": "Screenshort-cut",
+    "version": "5",
+    "enabled": true
+  },
+  {
+    "uuid": "sound-percentage@subashghimire.info.np",
+    "name": "Sound percentage",
+    "version": "2",
+    "enabled": true
+  },
+  {
+    "uuid": "steal-my-focus-window@steal-my-focus-window",
+    "name": "Steal my focus window",
+    "version": "5",
+    "enabled": true
+  },
+  {
+    "uuid": "system-monitor@gnome-shell-extensions.gcampax.github.com",
+    "name": "System Monitor",
+    "version": "9",
+    "enabled": false
+  },
+  {
+    "uuid": "update-extension@purejava.org",
+    "name": "Fedora Linux Update Indicator",
+    "version": "29",
+    "enabled": true
+  },
+  {
+    "uuid": "user-theme@gnome-shell-extensions.gcampax.github.com",
+    "name": "User Themes",
+    "version": "64",
+    "enabled": true
+  },
+  {
+    "uuid": "window-list@gnome-shell-extensions.gcampax.github.com",
+    "name": "Window List",
+    "version": "62",
+    "enabled": false
+  }
+]
