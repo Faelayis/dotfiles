@@ -15,7 +15,7 @@
     "uuid": "appindicatorsupport@rgcjonas.gmail.com",
     "name": "AppIndicator and KStatusNotifierItem Support",
     "version": "60",
-    "enabled": false
+    "enabled": true
   },
   {
     "uuid": "apps-menu@gnome-shell-extensions.gcampax.github.com",
