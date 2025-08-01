@@ -6,7 +6,7 @@ alias reload='omz reload'
 alias pn='pnpm'
 
 # Packages
-alias update-zsh='echo "RUN UPDATE (Oh My Zsh & zinit)" && omz update && zinit update --parallel && zinit delete --clean'
+alias update-zsh='echo "RUN UPDATE (Oh My Zsh & zinit)" && omz update && zinit update --parallel && zinit delete --clean && zinit cclear'
 alias update-flatpak='echo "RUN UPDATE (Flatpak)" && flatpak update -y'
 alias update-dnf='echo "RUN UPDATE (dnf)" && sudo dnf upgrade -y'
 alias update-all='echo "RUN UPDATE ALL" && update-dnf && update-zsh && update-flatpak'
