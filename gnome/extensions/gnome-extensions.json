@@ -51,7 +51,7 @@
     "uuid": "clipboard-indicator@tudmotu.com",
     "name": "Clipboard Indicator",
     "version": "68",
-    "enabled": true
+    "enabled": false
   },
   {
     "uuid": "color-picker@tuberry",
@@ -140,7 +140,7 @@
   {
     "uuid": "lockkeys@vaina.lt",
     "name": "Lock Keys",
-    "version": "61",
+    "version": "63",
     "enabled": true
   },
   {
