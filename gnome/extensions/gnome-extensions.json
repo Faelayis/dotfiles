@@ -98,7 +98,7 @@
   {
     "uuid": "dynamic-panel@velhlkj.com",
     "name": "Dynamic Panel",
-    "version": "40",
+    "version": "41",
     "enabled": false
   },
   {
@@ -242,7 +242,7 @@
   {
     "uuid": "update-extension@purejava.org",
     "name": "Fedora Linux Update Indicator",
-    "version": "29",
+    "version": "30",
     "enabled": true
   },
   {
