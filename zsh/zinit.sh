@@ -18,6 +18,7 @@ zinit snippet OMZL::prompt_info_functions.zsh
 zinit snippet OMZP::nvm
 zinit snippet OMZP::node
 zinit snippet OMZP::nodenv
+zinit snippet OMZP::brew
 zinit snippet OMZP::bun
 zinit snippet OMZP::dnf
 zinit snippet OMZP::git
