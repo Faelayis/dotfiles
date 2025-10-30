@@ -9,7 +9,9 @@ alias pn='pnpm'
 alias update-zsh='echo "RUN UPDATE (Oh My Zsh & zinit)" && omz update && zinit update --parallel && zinit delete --clean && zinit cclear'
 alias update-flatpak='echo "RUN UPDATE (Flatpak)" && flatpak update -y'
 alias update-dnf='echo "RUN UPDATE (dnf)" && sudo dnf upgrade -y'
-alias update-all='echo "RUN UPDATE ALL" && update-dnf && update-zsh && update-flatpak'
+alias update-asdf='echo "RUN UPDATE (asdf)" && asdf plugin update --all'
+alias update-brew='echo "RUN UPDATE (Homebrew)" && brew update && brew upgrade'
+alias update-all='echo "RUN UPDATE ALL" && update-dnf && update-zsh && update-flatpak && update-brew && update-asdf'
 
 # Utility
 alias nf='fastfetch'

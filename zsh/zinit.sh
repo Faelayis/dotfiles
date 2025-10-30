@@ -19,6 +19,8 @@ zinit snippet OMZP::nvm
 zinit snippet OMZP::node
 zinit snippet OMZP::nodenv
 zinit snippet OMZP::brew
+zinit snippet OMZP::asdf
+zinit snippet OMZP::flutter
 zinit snippet OMZP::bun
 zinit snippet OMZP::dnf
 zinit snippet OMZP::git
