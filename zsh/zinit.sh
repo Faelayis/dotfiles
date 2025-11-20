@@ -1,3 +1,16 @@
+## Themes
+# zinit light spaceship-prompt/spaceship-prompt
+
+# SPACESHIP_PROMPT_ASYNC=false
+# SPACESHIP_TIME_SHOW=true
+# SPACESHIP_USER_SHOW=false
+
+# Starship
+if command -v starship >/dev/null 2>&1; then
+   export STARSHIP_CONFIG=~/Documents/GitHub/faelayis/dotfiles/starship/starship.toml
+   eval "$(starship init zsh)"
+fi
+
 ## Plugin
 # zinit light zsh-users/zsh-autosuggestions
 # zinit light Aloxaf/fzf-tab
@@ -7,6 +20,9 @@ zinit light marlonrichert/zsh-autocomplete
 zinit light MichaelAquilina/zsh-you-should-use
 zinit light ntnyq/omz-plugin-bun
 zinit light ntnyq/omz-plugin-pnpm
+
+NVM_AUTO_USE=true
+zinit light lukechilds/zsh-nvm
 
 ## Snippets
 # OMZ/lib/

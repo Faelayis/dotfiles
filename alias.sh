@@ -11,7 +11,8 @@ alias update-flatpak='echo "RUN UPDATE (Flatpak)" && flatpak update -y'
 alias update-dnf='echo "RUN UPDATE (dnf)" && sudo dnf upgrade -y'
 alias update-asdf='echo "RUN UPDATE (asdf)" && asdf plugin update --all'
 alias update-brew='echo "RUN UPDATE (Homebrew)" && brew update && brew upgrade'
-alias update-all='echo "RUN UPDATE ALL" && update-dnf && update-zsh && update-flatpak && update-brew && update-asdf'
+alias update-snap='sudo snap refresh'
+alias update-all='echo "RUN UPDATE ALL" && update-dnf && update-zsh && update-flatpak && update-snap && update-brew && update-asdf'
 
 # Utility
 alias nf='fastfetch'
