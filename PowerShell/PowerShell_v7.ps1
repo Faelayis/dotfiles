@@ -6,14 +6,22 @@ foreach ($module in $modulesToImport) {
    }
 }
 
-if (Get-Command oh-my-posh -ErrorAction SilentlyContinue) {
-   $ohMyPoshConfig = "C:\Users\$([Environment]::UserName)\AppData\Local\Programs\oh-my-posh\themes\emodipt-extend.omp.json"
-   if (Test-Path $ohMyPoshConfig) {
-      $shells = @("pwsh", "powershell")
-      $shell = (oh-my-posh get shell 2>&1)
-      if ($shells -contains $shell) {
-         oh-my-posh init $shell --config $ohMyPoshConfig | Invoke-Expression
-      }
+# if (Get-Command oh-my-posh -ErrorAction SilentlyContinue) {
+#    $ohMyPoshConfig = "C:\Users\$([Environment]::UserName)\AppData\Local\Programs\oh-my-posh\themes\emodipt-extend.omp.json"
+#    if (Test-Path $ohMyPoshConfig) {
+#       $shells = @("pwsh", "powershell")
+#       $shell = (oh-my-posh get shell 2>&1)
+#       if ($shells -contains $shell) {
+#          oh-my-posh init $shell --config $ohMyPoshConfig | Invoke-Expression
+#       }
+#    }
+# }
+
+if (Get-Command starship -ErrorAction SilentlyContinue) {
+   $starshipConfig = "F:\Github\faelayis\dotfiles\starship\starship.toml"
+   if (Test-Path $starshipConfig) {
+      $ENV:STARSHIP_CONFIG = $starshipConfig
+      Invoke-Expression (& starship init powershell)
    }
 }
 
