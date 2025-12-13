@@ -3,6 +3,7 @@ sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda-libs -y
 
 modinfo -F version nvidia
 sudo akmods --force
+sudo akmods --force --rebuild
 
 echo "blacklist nouveau" | sudo tee /etc/modprobe.d/blacklist-nouveau.conf
 echo "options nouveau modset=0" | sudo tee -a /etc/modprobe.d/blacklist-nouveau.conf

@@ -12,10 +12,22 @@
     "enabled": true
   },
   {
+    "uuid": "SmartAutoMoveNG@lauinger-clan.de",
+    "name": "Smart Auto Move NG",
+    "version": "30",
+    "enabled": false
+  },
+  {
     "uuid": "accent-directories@taiwbi.com",
     "name": "Accent Icons",
     "version": "16",
     "enabled": false
+  },
+  {
+    "uuid": "adw-gtk3-colorizer@NiffirgkcaJ.github.com",
+    "name": "adw-gtk3 Colorizer",
+    "version": "3",
+    "enabled": true
   },
   {
     "uuid": "appindicatorsupport@rgcjonas.gmail.com",
@@ -30,6 +42,12 @@
     "enabled": false
   },
   {
+    "uuid": "auto-accent-colour@Wartybix",
+    "name": "Auto Accent Colour",
+    "version": "19",
+    "enabled": false
+  },
+  {
     "uuid": "auto-activities@CleoMenezesJr.github.io",
     "name": "Auto Activities",
     "version": "16",
@@ -38,7 +56,7 @@
   {
     "uuid": "aztaskbar@aztaskbar.gitlab.com",
     "name": "App Icons Taskbar",
-    "version": "36",
+    "version": "37",
     "enabled": true
   },
   {
@@ -54,9 +72,15 @@
     "enabled": true
   },
   {
+    "uuid": "blur-my-shell@aunetx",
+    "name": "Blur my Shell",
+    "version": "70",
+    "enabled": true
+  },
+  {
     "uuid": "caffeine@patapon.info",
     "name": "Caffeine",
-    "version": "58",
+    "version": "59",
     "enabled": true
   },
   {
@@ -80,7 +104,7 @@
   {
     "uuid": "current-monitor-window-app-switcher@thmatosbr",
     "name": "Current Monitor Window/App Switcher",
-    "version": "6",
+    "version": "7",
     "enabled": false
   },
   {
@@ -98,7 +122,7 @@
   {
     "uuid": "dash2dock-lite@icedman.github.com",
     "name": "Dash2Dock Animated",
-    "version": "78",
+    "version": "86",
     "enabled": false
   },
   {
@@ -111,18 +135,12 @@
     "uuid": "display-configuration-switcher@knokelmaat.gitlab.com",
     "name": "Display Configuration Switcher",
     "version": "12",
-    "enabled": true
+    "enabled": false
   },
   {
     "uuid": "dock-from-dash@fthx",
     "name": "Dock from Dash",
-    "version": "75",
-    "enabled": false
-  },
-  {
-    "uuid": "dynamic-panel@velhlkj.com",
-    "name": "Dynamic Panel",
-    "version": "45",
+    "version": "76",
     "enabled": false
   },
   {
@@ -136,6 +154,12 @@
     "name": "Gnome 4x UI Improvements",
     "version": "25",
     "enabled": true
+  },
+  {
+    "uuid": "hanabi-extension@jeffshee.github.io",
+    "name": "Hanabi Extension",
+    "version": "1",
+    "enabled": false
   },
   {
     "uuid": "junk-notification-cleaner@murar8.github.com",
@@ -188,7 +212,7 @@
   {
     "uuid": "panel-workspace-scroll@polymeilex.github.io",
     "name": "Panel Workspace Scroll",
-    "version": "6",
+    "version": "7",
     "enabled": true
   },
   {
@@ -200,7 +224,7 @@
   {
     "uuid": "power-off-options@axelitama.github.io",
     "name": "Power Off Options",
-    "version": "5",
+    "version": "7",
     "enabled": false
   },
   {
@@ -212,7 +236,7 @@
   {
     "uuid": "privacy-indicators-accent-color@sopht.li",
     "name": "Privacy Indicators Accent Color",
-    "version": "5",
+    "version": "7",
     "enabled": false
   },
   {
@@ -279,7 +303,7 @@
     "uuid": "user-theme@gnome-shell-extensions.gcampax.github.com",
     "name": "User Themes",
     "version": "69",
-    "enabled": false
+    "enabled": true
   },
   {
     "uuid": "window-commander@gnikolaos.gr",
@@ -291,6 +315,12 @@
     "uuid": "window-list@gnome-shell-extensions.gcampax.github.com",
     "name": "Window List",
     "version": "67",
+    "enabled": false
+  },
+  {
+    "uuid": "wsmatrix@martin.zurowietz.de",
+    "name": "Workspace Matrix",
+    "version": "51",
     "enabled": false
   }
 ]
