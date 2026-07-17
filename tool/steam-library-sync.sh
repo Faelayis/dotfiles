@@ -144,6 +144,8 @@ for destination_game in "$DESTINATION_COMMON"/*; do
     fi
 
     command -v pkexec >/dev/null || fail "pkexec is required to mount $mountpoint"
+    log "$installdir: reloading systemd mount configuration"
+    pkexec /usr/bin/systemctl daemon-reload || fail "could not reload systemd configuration"
     log "$installdir: requesting authorization to mount $mountpoint"
     pkexec /usr/bin/mount "$mountpoint" || fail "could not mount $mountpoint"
     [[ -d "$source_game" ]] || fail "game directory is still unavailable after mounting: $source_game"
