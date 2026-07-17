@@ -1,5 +1,9 @@
 #!/bin/bash
 
+## Setup Shell configuration
+echo 'source "$HOME/Documents/GitHub/faelayis/dotfiles/.bashrc"' >> "$HOME/.bashrc"
+echo 'source "$HOME/Documents/GitHub/faelayis/dotfiles/.zshrc"' >> "$HOME/.zshrc"
+
 ## Windows dual boot linux 
 # Font Sync https://wiki.archlinux.org/title/Microsoft_fonts
 sudo ln -s /mnt/02F0073CF0073607/Windows/Fonts /usr/local/share/fonts/WindowsFonts
