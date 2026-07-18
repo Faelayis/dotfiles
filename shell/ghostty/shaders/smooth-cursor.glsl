@@ -26,6 +26,10 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
 
     vec2 currentSize = iCurrentCursor.zw;
     vec2 previousSize = iPreviousCursor.zw;
+    if (iTime < DURATION || previousSize.x < 1.0 || previousSize.y < 1.0) {
+        return;
+    }
+
     vec2 currentCenter = iCurrentCursor.xy + vec2(currentSize.x, -currentSize.y) * 0.5;
     vec2 previousCenter = iPreviousCursor.xy + vec2(previousSize.x, -previousSize.y) * 0.5;
 
