@@ -7,6 +7,7 @@
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light marlonrichert/zsh-autocomplete
+zinit ice depth"1"; zinit light Michael-Matta1/zsh-edit-select
 zinit ice wait lucid
 zinit light MichaelAquilina/zsh-you-should-use
 # zinit light ntnyq/omz-plugin-bun
