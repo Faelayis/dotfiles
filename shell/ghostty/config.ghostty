@@ -2,7 +2,7 @@ font-family = CaskaydiaMono Nerd Font
 font-size = 11
 window-width = 140
 window-height = 33
-gtk-single-instance = true
+window-inherit-working-directory = false
 theme = Adwaita Dark
 background = #1c1c1f
 cursor-style = underline
@@ -10,8 +10,9 @@ shell-integration-features = no-cursor
 custom-shader = shaders/smooth-cursor.glsl
 custom-shader-animation = true
 
-keybind = ctrl+shift+c=csi:67;6u
-keybind = ctrl+shift+z=csi:90;6u
+keybind = ctrl+shift+KeyV=paste_from_clipboard
+keybind = ctrl+shift+KeyC=csi:67;6u
+keybind = ctrl+shift+KeyZ=csi:90;6u
 keybind = shift+left=unbind
 keybind = shift+right=unbind
 keybind = shift+up=unbind
