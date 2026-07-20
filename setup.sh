@@ -1,8 +1,10 @@
 #!/bin/bash
 
 ## Setup Shell configuration
-echo 'source "$HOME/Documents/GitHub/faelayis/dotfiles/.bashrc"' >> "$HOME/.bashrc"
-echo 'source "$HOME/Documents/GitHub/faelayis/dotfiles/.zshrc"' >> "$HOME/.zshrc"
+grep -qxF 'source "$HOME/Documents/GitHub/faelayis/dotfiles/.bashrc"' "$HOME/.bashrc" || \
+   printf '%s\n' 'source "$HOME/Documents/GitHub/faelayis/dotfiles/.bashrc"' >> "$HOME/.bashrc"
+grep -qxF 'source "$HOME/Documents/GitHub/faelayis/dotfiles/.zshrc"' "$HOME/.zshrc" || \
+   printf '%s\n' 'source "$HOME/Documents/GitHub/faelayis/dotfiles/.zshrc"' >> "$HOME/.zshrc"
 
 ## Windows dual boot linux 
 # Font Sync https://wiki.archlinux.org/title/Microsoft_fonts

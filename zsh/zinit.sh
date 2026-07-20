@@ -1,17 +1,41 @@
-## Themes
-# zinit light spaceship-prompt/spaceship-prompt
+## Shell behavior
+export ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
+[[ -d "$ZSH_CACHE_DIR/completions" ]] || command mkdir -p "$ZSH_CACHE_DIR/completions"
 
-## Plugin
-# zinit light zsh-users/zsh-autosuggestions
-# zinit light Aloxaf/fzf-tab
-zinit light zdharma-continuum/fast-syntax-highlighting
+typeset -U fpath
+fpath=("$ZSH_CACHE_DIR/completions" $fpath)
+
+zinit snippet OMZL::history.zsh
+zinit snippet OMZL::key-bindings.zsh
+
+## Completion and widgets
 zinit light zsh-users/zsh-completions
+zinit ice cloneonly
 zinit light marlonrichert/zsh-autocomplete
-zinit ice depth"1"; zinit light Michael-Matta1/zsh-edit-select
-zinit ice wait lucid
-zinit light MichaelAquilina/zsh-you-should-use
+source "$ZINIT[PLUGINS_DIR]/marlonrichert---zsh-autocomplete/zsh-autocomplete.plugin.zsh"
+
+# Generated completion scripts should not initialize completion before autocomplete.
+compinit() { :; }
+
+## Oh My Zsh dependencies
+zstyle ':omz:alpha:lib:git' async-prompt no
+zinit snippet OMZL::git.zsh
+zinit snippet OMZL::clipboard.zsh
+zinit snippet OMZL::functions.zsh
+
+## Completion-aware snippets
+zinit snippet OMZP::brew
+zinit snippet OMZP::asdf
+zinit snippet OMZP::flutter
+zinit snippet OMZP::git
+
+## Runtime tools
 # zinit light ntnyq/omz-plugin-bun
 # zinit light ntnyq/omz-plugin-pnpm
+zinit ice from"gh-r" as"program"
+zinit light ajeetdsouza/zoxide
+
+eval "$(zoxide init zsh)"
 
 # Keep the default Node executable available while loading nvm on demand.
 export NVM_DIR="$HOME/.nvm"
@@ -37,11 +61,35 @@ export NVM_LAZY_LOAD=true
 export NVM_NO_USE=true
 export NVM_COMPLETION=true
 export NVM_AUTO_USE=false
+zinit ice wait lucid
 zinit light lukechilds/zsh-nvm
 
-## Snippets
+## Interactive widgets
+zinit ice cloneonly depth"1"
+zinit light Michael-Matta1/zsh-edit-select
+source "$ZINIT[PLUGINS_DIR]/Michael-Matta1---zsh-edit-select/zsh-edit-select.plugin.zsh"
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=247'
+zinit light zsh-users/zsh-autosuggestions
+
+_tab_accept_autosuggestion_or_complete() {
+  if (( $#POSTDISPLAY && CURSOR == $#BUFFER )); then
+    zle autosuggest-accept
+  else
+    zle complete-word -w
+  fi
+}
+
+zle -N tab-accept-autosuggestion-or-complete _tab_accept_autosuggestion_or_complete
+ZSH_AUTOSUGGEST_IGNORE_WIDGETS+=(tab-accept-autosuggestion-or-complete)
+bindkey -M main '^I' tab-accept-autosuggestion-or-complete
+
+## Deferred helpers
 zinit ice wait lucid
-zinit snippet OMZP::git
+zinit light zdharma-continuum/fast-syntax-highlighting
+
+zinit ice wait lucid
+zinit light MichaelAquilina/zsh-you-should-use
 
 zinit ice wait lucid
 zinit snippet OMZP::history
@@ -53,44 +101,4 @@ zinit ice wait lucid
 zinit snippet OMZP::command-not-found
 
 zinit ice wait lucid
-zinit snippet OMZP::brew
-
-zinit ice wait lucid
-zinit snippet OMZP::asdf
-
-zinit ice wait lucid
-zinit snippet OMZP::flutter
-
-zinit ice wait lucid as:completion
 zinit snippet OMZP::node
-
-## Config
-# zsh-users/zsh-autosuggestions
-ZSH_AUTOSUGGEST_USE_ASYNC=true
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=247'
-
-autoload -Uz compinit zrecompile
-typeset _zcompdump="${ZDOTDIR:-$HOME}/.zcompdump"
-typeset -a _zcompdump_stale
-_zcompdump_stale=("$_zcompdump"(N.mh+24))
-
-if [[ ! -s "$_zcompdump" || ${#_zcompdump_stale} -ne 0 ]]; then
-  compinit -d "$_zcompdump"
-  [[ -s "$_zcompdump" ]] && command touch "$_zcompdump"
-else
-  compinit -C -d "$_zcompdump"
-fi
-
-# Compile the dump once so warm shells avoid parsing the text cache.
-if [[ -s "$_zcompdump" && (! -s "$_zcompdump.zwc" || "$_zcompdump" -nt "$_zcompdump.zwc") ]]; then
-  if command mkdir "$_zcompdump.lock" 2>/dev/null; then
-    zrecompile -q -p "$_zcompdump"
-    command rm -f "$_zcompdump.zwc.old"
-    command rmdir "$_zcompdump.lock" 2>/dev/null
-  fi
-fi
-
-unset _zcompdump _zcompdump_stale
-
-# Let zsh-autocomplete reuse the initialized cache instead of rebuilding it at precmd.
-compdef _autocomplete__command -command-

@@ -1,4 +1,5 @@
 const float DURATION = 0.28;
+const float STARTUP_DELAY = 1.0;
 
 float easeOutCubic(float t) {
     return 1.0 - pow(1.0 - t, 3.0);
@@ -26,7 +27,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
 
     vec2 currentSize = iCurrentCursor.zw;
     vec2 previousSize = iPreviousCursor.zw;
-    if (iTime < DURATION || previousSize.x < 1.0 || previousSize.y < 1.0) {
+    if (iTimeCursorChange < STARTUP_DELAY || previousSize.x < 1.0 || previousSize.y < 1.0) {
         return;
     }
 
