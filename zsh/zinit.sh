@@ -8,6 +8,34 @@ fpath=("$ZSH_CACHE_DIR/completions" $fpath)
 zinit snippet OMZL::history.zsh
 zinit snippet OMZL::key-bindings.zsh
 
+autoload -Uz add-zsh-hook
+typeset -g _history_autosuggest_ignore_base=${ZSH_AUTOSUGGEST_HISTORY_IGNORE-}
+
+_history_ignore_unknown_commands() {
+  emulate -L zsh
+  setopt extended_glob
+
+  local line=${1%%$'\n'}
+  local -a words
+  words=(${(z)line})
+  local command_name=${words[1]}
+
+  ZSH_AUTOSUGGEST_HISTORY_IGNORE=$_history_autosuggest_ignore_base
+
+  [[ -z $command_name || $command_name != [[:alnum:]_.-]## ]] && return 0
+  whence -w -- "$command_name" >/dev/null 2>&1 && return 0
+
+  if [[ -n $_history_autosuggest_ignore_base ]]; then
+    ZSH_AUTOSUGGEST_HISTORY_IGNORE="($_history_autosuggest_ignore_base|${(b)line})"
+  else
+    ZSH_AUTOSUGGEST_HISTORY_IGNORE=${(b)line}
+  fi
+
+  return 1
+}
+
+add-zsh-hook zshaddhistory _history_ignore_unknown_commands
+
 ## Completion and widgets
 zinit light zsh-users/zsh-completions
 zinit ice cloneonly
