@@ -89,8 +89,29 @@ export NVM_LAZY_LOAD=true
 export NVM_NO_USE=true
 export NVM_COMPLETION=true
 export NVM_AUTO_USE=false
-zinit ice wait lucid
+
+_nvm_lazy_auto_use() {
+  if (( ! $+functions[nvm_find_nvmrc] )); then
+    local nvmrc_dir="$PWD"
+    while [[ "$nvmrc_dir" != / && ! -f "$nvmrc_dir/.nvmrc" ]]; do
+      nvmrc_dir="${nvmrc_dir:h}"
+    done
+
+    [[ -f "$nvmrc_dir/.nvmrc" ]] || return
+    nvm --version >/dev/null
+  fi
+
+  _zsh_nvm_auto_use >/dev/null
+}
+
+_nvm_lazy_auto_use_init() {
+  autoload -U add-zsh-hook
+  add-zsh-hook chpwd _nvm_lazy_auto_use
+  _nvm_lazy_auto_use
+}
+
 zinit light lukechilds/zsh-nvm
+_nvm_lazy_auto_use_init
 
 ## Interactive widgets
 zinit ice cloneonly depth"1"
