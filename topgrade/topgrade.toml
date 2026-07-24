@@ -1,0 +1,4 @@
+[misc]
+pre_sudo = true
+
+disable = ["pnpm"]
