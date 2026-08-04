@@ -38,7 +38,9 @@ add-zsh-hook zshaddhistory _history_ignore_unknown_commands
 
 ## Completion and widgets
 zinit light zsh-users/zsh-completions
-zinit ice cloneonly
+zinit ice cloneonly cloneopts"--no-recurse-submodules" \
+  atclone"git config submodule.z-async.url https://github.com/marlonrichert/z-async.git && git submodule update --init z-async" \
+  atpull"%atclone"
 zinit light marlonrichert/zsh-autocomplete
 source "$ZINIT[PLUGINS_DIR]/marlonrichert---zsh-autocomplete/zsh-autocomplete.plugin.zsh"
 
@@ -117,6 +119,9 @@ _nvm_lazy_auto_use_init
 zinit ice cloneonly depth"1"
 zinit light Michael-Matta1/zsh-edit-select
 source "$ZINIT[PLUGINS_DIR]/Michael-Matta1---zsh-edit-select/zsh-edit-select.plugin.zsh"
+
+bindkey -M emacs $'\e[99;6u' edit-select::copy-region
+bindkey -M edit-select $'\e[99;6u' edit-select::copy-region
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=247'
 zinit light zsh-users/zsh-autosuggestions

@@ -1,4 +1,8 @@
 [misc]
 pre_sudo = true
+assume_yes = true
+ask_retry = false
+notify_each_step = false
+notify_end = "never"
 
 disable = ["pnpm"]

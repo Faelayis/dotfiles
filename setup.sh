@@ -45,10 +45,10 @@ gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-right "['<Shift><
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left "['<Shift><Super>q']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right "['<Shift><Super>e']"
 
-
-gsettings set org.gnome.desktop.session idle-delay 180
-
 # Power settings for GDM
+gsettings set org.gnome.desktop.session idle-delay 180
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 180
+
 for setting in sleep-inactive-ac-timeout sleep-inactive-battery-timeout sleep-inactive-battery-type sleep-inactive-ac-type; do
    value=0
    [ "$setting" == "sleep-inactive-battery-type" ] || [ "$setting" == "sleep-inactive-ac-type" ] && value=nothing
