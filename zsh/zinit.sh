@@ -38,6 +38,8 @@ add-zsh-hook zshaddhistory _history_ignore_unknown_commands
 
 ## Completion and widgets
 zinit light zsh-users/zsh-completions
+# zsh-autocomplete clones zasync here and needs it on fpath before its first precmd.
+fpath=("$ZSH_CACHE_DIR/zasync" $fpath)
 zinit ice cloneonly cloneopts"--no-recurse-submodules" \
   atclone"git config submodule.z-async.url https://github.com/marlonrichert/z-async.git && git submodule update --init z-async" \
   atpull"%atclone"
