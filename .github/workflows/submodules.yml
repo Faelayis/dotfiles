@@ -1,0 +1,61 @@
+name: Sync branch submodules
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: submodules
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Add, remove and update one submodule per branch
+        env:
+          REPO_URL: https://github.com/${{ github.repository }}.git
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          branches=$(git ls-remote --heads origin | sed 's#.*refs/heads/##' | grep -vxF "$DEFAULT_BRANCH" || true)
+
+          # Drop submodules whose branch no longer exists
+          if [ -f .gitmodules ]; then
+            git config -f .gitmodules --get-regexp '^submodule\..*\.path$' | while read -r _ path; do
+              if ! grep -qxF "$path" <<< "$branches"; then
+                git rm -q -f "$path"
+                rm -rf ".git/modules/$path"
+              fi
+            done
+          fi
+
+          # Add a submodule for each new branch, tracking that branch
+          for b in $branches; do
+            if [ ! -e "$b" ]; then
+              git submodule add -b "$b" "$REPO_URL" "$b"
+            fi
+          done
+
+          git submodule update --init --remote
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -a --allow-empty-message -m ""
+            git push
+          fi
