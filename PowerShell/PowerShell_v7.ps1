@@ -1,10 +1,10 @@
-$modulesToImport = @("Terminal-Icons", "Az.Tools.Predictor", "Microsoft.WinGet.CommandNotFound")
+# $modulesToImport = @("Terminal-Icons", "Az.Tools.Predictor", "Microsoft.WinGet.CommandNotFound")
 
-foreach ($module in $modulesToImport) {
-   if (-not (Get-Module -Name $module -ListAvailable)) {
-      Import-Module -Name $module -ErrorAction SilentlyContinue
-   }
-}
+# foreach ($module in $modulesToImport) {
+#    if (-not (Get-Module -Name $module -ListAvailable)) {
+#       Import-Module -Name $module -ErrorAction SilentlyContinue
+#    }
+# }
 
 # if (Get-Command oh-my-posh -ErrorAction SilentlyContinue) {
 #    $ohMyPoshConfig = "C:\Users\$([Environment]::UserName)\AppData\Local\Programs\oh-my-posh\themes\emodipt-extend.omp.json"
@@ -98,6 +98,9 @@ if ($PSVersionTable.PSVersion.Major -ge 7) {
    function wingetupdateall {
       winget upgrade --silent --all --include-unknown
    }
+   # function topgrade {
+   #  Start-Process "topgrade.exe" -Verb RunAs -ArgumentList $args
+   # }
 }
 
 Set-Alias -Name pn -Value pnpm

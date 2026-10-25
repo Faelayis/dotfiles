@@ -1,0 +1,20 @@
+[misc]
+disable = [
+   # "winget"
+   "containers",
+   "dotnet",
+   "node",
+]
+assume_yes = true
+cleanup = true
+no_retry = true
+notify_end = "never"
+
+[windows]
+updates_auto_reboot = "no"
+accept_all_updates = true
+self_rename = true
+winget_silent_install = true
+
+[post_commands]
+"Scoop cache cleanup" = "scoop cache rm *"
