@@ -1,0 +1,12 @@
+[submodule "armbian"]
+	path = armbian
+	url = https://github.com/Faelayis/dotfiles.git
+	branch = armbian
+[submodule "fedora"]
+	path = fedora
+	url = https://github.com/Faelayis/dotfiles.git
+	branch = fedora
+[submodule "windows"]
+	path = windows
+	url = https://github.com/Faelayis/dotfiles.git
+	branch = windows
