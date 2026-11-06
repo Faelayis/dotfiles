@@ -3,6 +3,9 @@ ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOCONNECT=true
 ZSH_TMUX_AUTONAME_SESSION=true
 
+# The plugin sources tmux.only.conf / tmux.extra.conf from its own directory; snippets fetch only the main file.
+zinit ice atclone'local f; for f in tmux.extra.conf tmux.only.conf; do curl -fsSL -o $f https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/tmux/$f; done' \
+  atpull"%atclone"
 zinit snippet OMZP::tmux
 
 ## Shell behavior
@@ -49,7 +52,7 @@ zinit light zsh-users/zsh-completions
 fpath=("$ZSH_CACHE_DIR/zasync" $fpath)
 zinit ice cloneonly cloneopts"--no-recurse-submodules" \
   atclone"git config submodule.z-async.url https://github.com/marlonrichert/z-async.git && git submodule update --init z-async" \
-  atpull"%atclone"
+  \n  atpull"%atclone"
 zinit light marlonrichert/zsh-autocomplete
 source "$ZINIT[PLUGINS_DIR]/marlonrichert---zsh-autocomplete/zsh-autocomplete.plugin.zsh"
 
