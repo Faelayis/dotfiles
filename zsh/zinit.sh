@@ -1,12 +1,12 @@
 ## tmux
-ZSH_TMUX_AUTOSTART=true
-ZSH_TMUX_AUTOCONNECT=false
-ZSH_TMUX_AUTONAME_SESSION=false
+# ZSH_TMUX_AUTOSTART=true
+# ZSH_TMUX_AUTOCONNECT=false
+# ZSH_TMUX_AUTONAME_SESSION=false
 
 # The plugin sources tmux.only.conf / tmux.extra.conf from its own directory; snippets fetch only the main file.
-zinit ice atclone'local f; for f in tmux.extra.conf tmux.only.conf; do curl -fsSL -o $f https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/tmux/$f; done' \
-  atpull"%atclone"
-zinit snippet OMZP::tmux
+# zinit ice atclone'local f; for f in tmux.extra.conf tmux.only.conf; do curl -fsSL -o $f https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/tmux/$f; done' \
+# atpull"%atclone"
+# zinit snippet OMZP::tmux
 
 ## Shell behavior
 export ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
